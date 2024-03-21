@@ -53,7 +53,7 @@ async function handler(event){
     function loadImages(e) {
         e.preventDefault();
         let currentQuery = searchInput.value;
-        list.insertAdjacentElement('afterend', load);
+        list.insertAdjacentHTML('afterend', load);
         load.style.display = 'inline-block';
         currentPage++;
         getNewImages(currentQuery, 15, currentPage).then(data => {
